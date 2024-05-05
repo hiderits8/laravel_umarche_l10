@@ -7,12 +7,18 @@ use Illuminate\Http\Request;
 
 class OwnersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         //
+        dd('オーナー一覧です。');
     }
 
     /**
